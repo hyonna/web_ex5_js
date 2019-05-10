@@ -14,12 +14,15 @@
 	  
 	  
 	  
+	  
 	  $('#idOk').click(function() {
 		
 		  open("./jquery7-1.html","_blank","top=200, left=200, width=300, height=250");
 		  
 	});
 	  
+	  
+	 /*  아이디 중복확인 */
 	  
 	  $('#id').on('keyup', function() {
 		  
@@ -31,27 +34,12 @@
 	});
 	  
 	  
-	  $('#id').click(function() {
+	 
+	  $('#id').change(function() {
 		  
-		  var idResult = $('#id').val();
-		  var result = true;
-		  
-		  $('#id').change(function() {
-			  
-			  if(idResult == $('#id').val()) {
-				  
-				  $("#idChk", opener.document ).html('<p style="color:red; font-weight:700; margin:20px 0;">중복확인 완료</p>');
-				  
-			  } else {
-				  
-			  $('#idChk').html('<p id="idOver" style="color:red; font-weight:700; margin:20px 0;">아이디 중복확인 해야함</p>');
-			  
-			  }
-		});
-		  
+		  $('#idc').val('0');
 		
 	});
-	  
 	  
 	  
 		  
@@ -72,12 +60,13 @@
 				
 		});
 		 
-		 if(result) {
+		 if(result && $('#idc').val() == '1') {
 			 
 			 $('#formBox').submit();
 			 
 		 } else {
 			 
+			 $('#idChk').html('<p id="idOver" style="color:red; font-weight:700; margin:20px 0;">아이디 중복확인 해야함</p>');
 			 alert("모두 입력하세요");
 		 }
 		  
@@ -135,6 +124,7 @@
     <div class="form-group">
       <label for="id">Id:</label>
       <input type="text"  class="form-control" id="id" placeholder="10자 미만" name="id">
+      <input type="hidden" id="idc" value="0">
       <input type="button" class="btn btn-default" value="중복확인" id="idOk" style="margin-top: 5px;"><!--  중복확인 누르면 팝업창 뜨면서 아이디 입력하고 확인 버튼 누르면 창 꺼짐 / value값에 입력한 아이디 입력되어짐 / 중복확인 했다 라는 표시를 어딘가에는 해놔야함 -->
     </div>
     
