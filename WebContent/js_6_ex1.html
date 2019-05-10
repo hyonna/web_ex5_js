@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<input type="text" id="f1" value="">
+	<input type="text" id="f2" value="">
+	<input type="text" id="f3" value="">
+	= <input type="text" id="f4" value=""> <br>
+	<button id="f5" onclick="v1()">Click</button>
+	
+	<script type="text/javascript">
+	
+	var f1 = document.getElementById('f1').value;
+	var f2 = document.getElementById('f2').value;
+	var f3 = document.getElementById('f3').value;
+	var f4 = document.getElementById('f4');
+	
+	function v1() {
+		
+		
+		if(f2 == '*') {
+			
+			f4.value = f1 * f3;
+			
+		} else if(f2 == '+') {
+			
+			f4.value = paerseInt(f1) + paerseInt(f3);
+			
+		} else if(f2 == '-') {
+			
+			f4.value = f1 - f3;
+			
+		} else if(f2 == '/') {
+			
+			f4.value = f1 / f3;
+			
+		} else {
+			
+			alert("다시 입력");
+		}
+		
+		
+	}
+	
+	
+	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+window.onload = function() {
+	
+
+
+var pw = document.getElementById('pw');
+var pw2 = document.getElementById('pw2');
+var div = document.getElementById('d');
+
+
+
+pw2.addEventListener('keyup', function() {
+	
+	if(pw.value == pw2.value) {
+		
+		div.innerHTML = "OK";
+	} else {
+		
+		div.innerHTML = "NO";
+	}
+	
+});
+
+
+}
+
+
+</script>
+</head>
+<body>
+
+<!-- addEventListener -->
+<p><input type="password" id="pw"></p> <!-- 123 -->
+<p><input type="password" id="pw2"></p>
+<div id="d"><!-- 첫번째 패스워드 입력할떄마다 비교 --> </div>
+
+</body>
+</html>

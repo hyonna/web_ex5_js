@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	A
+	<input type="checkbox" id="all" onclick="go()"> 
+	1
+	<input type="checkbox" checked="checked" class="c1" onclick="go2()">
+	2
+	<input type="checkbox" class="c1" onclick="go2()"> 
+	3
+	<input type="checkbox" class="c1" onclick="go2()">
+
+	<script type="text/javascript">
+	
+	
+		var c1 = document.getElementsByClassName("c1");
+		var all = document.getElementById("all");
+
+		function go() {
+
+			for (var i = 0; i < c1.length; i++) {
+
+				c1[i].checked = all.checked;
+
+			}
+
+		}
+
+		function go2() {
+
+			var result = true;
+
+			for (var i = 0; i < c1.length; i++) {
+
+				if (!c1[i].checked) {
+					
+					result = false;
+					break;
+				} 
+
+			}
+			
+			all.checked = result;
+
+		}
+	</script>
+
+</body>
+
+</html>

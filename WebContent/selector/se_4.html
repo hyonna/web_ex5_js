@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+    <div>
+
+        1<input type="radio" name="r" class="r1" id="d1" value="A">
+        2<input type="radio" name="r" Checked="checked" class="r1" id="d2" value="B">
+        3<input type="radio" name="r" class="r1" id="d3" value="C">
+        4<input type="radio" name="r" class="r1" id="d4" value="D">
+
+    </div>
+
+    <button onclick="go()">Click</button>
+
+    <script type="text/javascript">
+
+        function go() {
+            
+            var r1 = document.getElementsByClassName("r1"); //배열
+            
+            for (var i = 0; i < r1.length; i++) {
+
+                if(r1[i].checked) {
+
+                    alert(r1[i].value);
+                }
+                
+            }
+
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

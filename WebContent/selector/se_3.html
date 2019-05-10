@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+    <style type="text/css">
+        #d1 table {
+
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        #d1 table tr {
+
+            border: 1px solid black;
+        }
+
+        #d1 table td {
+
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="d1">
+
+        ROW <input type="text" value="" id="r1">
+        COLUMN <input type="text" value="" id="c1">
+        <button onclick="go()">Click</button>
+
+    </div>
+    <div></div>
+
+    <script type="text/javascript">
+
+        function go() {
+
+            var d1 = document.getElementById("d1");
+            var r1 = document.getElementById("r1");
+            var c1 = document.getElementById("c1");
+
+            var result = '';
+
+            for (var i = 1; i <= c1.value; i++) {
+
+                result = result + '<tr>';
+
+                for (var j = 1; j <= r1.value; j++) {
+
+                    result = result + '<td>' + j + '</td>';
+
+                }
+
+                result = result + '</tr>';
+
+            }
+
+            d1.innerHTML = '<table>' + result + '</table>';
+
+        }
+
+    </script>
+
+</body>
+
+</html>

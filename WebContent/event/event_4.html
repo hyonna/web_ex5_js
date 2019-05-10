@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+window.onload = function() {
+	
+	var btn1 = document.getElementById('btn1');
+	var test = document.getElementById('test');
+	
+	document.fr.test.value = "aaaaaa"; // document.getElementById('test').value 와 동일
+	
+	btn1.addEventListener('click', function() {
+		
+		if(test.value=='') {
+			
+			alert("값이 없음");
+			document.getElementById('btn2').click(); //강제 click 이벤트 실행
+			
+		} else {
+			
+			document.getElementById('frm').submit();
+		}
+		
+	});
+	
+	
+}
+
+
+</script>
+
+</head>
+<body>
+
+<form action="./event_ex2.html" id="frm" name="fr">
+
+	<input type="text" name="test" id="test">
+	<input type="button" value="btn1" id="btn1">
+	<input type="submit" value="btn2" id="btn2"> <!-- submit 이벤트 내장 -->
+	<button>btn3</button> <!-- submit 이벤트 내장 -->
+	
+
+</form>
+
+</body>
+</html>

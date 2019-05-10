@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+	//BOM(Browser Object Model)
+	//window
+	// - document : HTML문서, css
+	// - history : 뒤로가기 앞으로 가기 새로고침
+	// - location : 주소창
+	// - screen : 화면의 위치, 화면의 정보
+	// - navigator : 접속하는 웹브라우저 정보를 담는
+	
+	//**************************************
+	
+	// java method
+	// 접근지정자 [그외 지정자] 리턴타입 메소드명([매개변수선언]) {}
+	// 메서드 호출
+	// 참조변수명.메서드명([인자값들..]);
+	
+	// javascript method(function, 함수)
+	// function 함수명([매개변수 선언]) {}
+	
+	// 함수의 종류
+	// 1. 익명함수 : 함수의 이름이 없는 함수
+	
+	var f1 = function () {
+		
+		alert('익명함수');
+		
+	} 
+	
+	f1();
+	
+	
+	// 2. 명명함수 : 이름이 있는 함수 (는 호출 먼저 해도 됨)
+	
+	function f2() {
+		
+		alert('명명함수');
+		
+	}
+	
+	f2();
+	
+	
+	//매개변수 선언은 변수명만 선언
+	function f3(num1, num2) {
+		
+		return num1+num2;
+		
+	}
+	
+	var n = f3(2,3);
+	alert(n);
+	
+	
+	// 3. callback 함수
+	// 어떤 함수의 매개변수의 값으로 함수를 전달 할때
+	
+	
+	function f5(f4) {
+		
+		
+		
+	}
+	
+	function f4() {
+		
+		
+		
+	}
+	
+	
+	
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	//onload - 전체 페이지 로딩이 끝난 후 실행, 그러면 스크립트를 바디에 안적어도 됨
+
+	/* window.onload = function() {
+
+		var btn = document.getElementById('btn');
+		btn.onclick = function() {
+
+			alert("click");
+
+		}
+	}
+
+	window.unload = function() {
+
+		alert("bye");
+
+	} */
+	
+	
+	window.onload = function() {
+
+		var btn = document.getElementById('btn');
+		btn.addEventListener('click', go);   //이벤트명 on 빼고 작성. //함수명에 () 을 빼고 작성하면 클릭했을때 실행, 안그럼 페이지 로드될때 바로 실행됨
+		
+		function go() {
+		
+			alert('click');
+		}
+		
+		
+		
+		// ---------------------------------------------
+		
+		// 클래스로 이벤트 적용시킬때 
+		
+		var b = document.getElementsByClassName('b');
+		
+		for (var i = 0; i < b.length; i++) {
+			
+		b[i].addEventListener('click', function() {  
+			
+			alert('click1');
+			
+		}); 
+			
+		}
+		
+	}
+</script>
+
+</head>
+<body>
+
+	<button id="btn" class="b">Click</button>
+	<button id="btn" class="b">Click</button>
+	<button id="btn" class="b">Click</button>
+	<button id="btn" class="b">Click</button>
+
+</body>
+</html>

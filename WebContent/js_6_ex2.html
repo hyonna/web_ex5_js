@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<img alt="sky" src="./images/1.jpg" width="300px" height="500px"
+		id="i1" class="c1" title="t1">
+	<br>
+
+	<button onclick="v1()">Click</button>
+
+	<button onclick="v2()">Change</button>
+
+	<button onclick="v3()">Toggle</button>
+
+	<script type="text/javascript">
+	
+	
+		var f1 = document.getElementById('i1');
+		boolean check = true;
+	
+	function v3() {
+		
+		if(check) {
+			
+			f1.src = "./images/2.jpg";
+		} else {
+			
+			f1.src = "./images/1.jpg";
+		}
+		
+		check = !check;
+		
+		/* if(f1.title == "t1") {
+			
+			f1.src = "./images/2.jpg";
+			f1.title = "t2";
+			
+		} else {
+			
+			f1.src = "./images/1.jpg";
+			f1.title = "t1";
+			
+		} */
+		
+		}
+		
+	
+	function v2() {
+			
+		f1.setAttribute("src", "./images/2.jpg");
+	}
+
+	
+	
+	function v1() {
+		
+
+		
+		//attribute 가지고 오기
+		//	i1.getAttribute("속성명");
+		// ex) alert(f1.getAttribute("alt"));
+		// ex) alert(f1.getAttribute("class"));
+		
+		//attribute 값을 변경하거나 추가할때
+		//i1.setAttribute("속성명", "값");
+
+			alert(f1.alt);
+			alert(f1.id);
+			alert(f1.className);
+			alert(f1.title);
+			alert(f1.src);
+			
+			
+
+		}
+	</script>
+
+</body>
+</html>
